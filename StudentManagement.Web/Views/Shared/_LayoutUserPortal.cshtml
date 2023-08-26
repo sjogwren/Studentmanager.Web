@@ -1,0 +1,131 @@
+﻿
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Student Manager</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="~/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="~/front-dashboard-v1.1/dist/assets/css/vendor.min.css">
+    <link rel="stylesheet" href="~/front-dashboard-v1.1/dist/assets/vendor/icon-set/style.css">
+
+    <!-- CSS Front Template -->
+    <link rel="stylesheet" href="~/front-dashboard-v1.1/dist/assets/css/theme.min.css?v=1.0">
+</head>
+
+<body class="d-flex align-items-center min-h-100">
+    <!-- ========== HEADER ========== -->
+    <header class="position-absolute top-0 left-0 right-0 mt-3 mx-3">
+        <div class="d-flex d-lg-none justify-content-between">
+        </div>
+    </header>
+    <!-- ========== END HEADER ========== -->
+    <!-- ========== MAIN CONTENT ========== -->
+    <main id="content" role="main" class="main pt-0">
+        <!-- Content -->
+        <div class="container-fluid px-3">
+            <div class="row">
+                <!-- Cover -->
+                <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center min-vh-lg-100 position-relative bg-light px-0">
+                    <!-- Logo & Language -->
+                    <div class="position-absolute top-0 left-0 right-0 mt-3 mx-3">
+                        <div class="d-none d-lg-flex justify-content-between">
+                            @*<span>
+                                    <img class="w-100" src="~/front-dashboard-v1.1/dist/assets/img/logo/smart-reservations.png" alt="Image Description" style="min-width: 7rem; max-width: 7rem;">
+                                </span>*@
+                        </div>
+                    </div>
+                    <!-- End Logo & Language -->
+
+                    <div style="max-width: 23rem;">
+                        @*<div class="text-center mb-5">
+                                <img class="img-fluid" src="~/front-dashboard-v1.1/dist/assets/svg/illustrations/chat.svg" alt="Image Description" style="width: 12rem;">
+                            </div>*@
+
+                        <div class="mb-5">
+                            <h2 class="display-4 text-danger">Student manager</h2>
+                        </div>
+
+                        <!-- List Checked -->
+                        <ul class="list-checked list-checked-lg list-checked-primary list-unstyled-py-4">
+                            <li class="list-checked-item">
+                                <span class="d-block font-weight-bold mb-1">Student</span>
+                                Keep track of students
+                            </li>
+
+                            <li class="list-checked-item">
+                                <span class="d-block font-weight-bold mb-1">Subjects</span>
+                                Assign student to subject
+                            </li>
+                        </ul>
+                        <!-- End List Checked -->
+                        <!-- End Row -->
+                    </div>
+                </div>
+                <!-- End Cover -->
+
+                @RenderBody()
+            </div>
+            <!-- End Row -->
+        </div>
+        <!-- End Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+    <!-- JS Implementing Plugins -->
+    @*<script src="~/front-dashboard-v1.1/dist/assets/js/vendor.min.js"></script>*@
+    <script src="~/front-dashboard-v1.1/dist/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="~/front-dashboard-v1.1/dist/assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="~/front-dashboard-v1.1/dist/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/front-dashboard-v1.1/dist/assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/front-dashboard-v1.1/dist/assets/js/theme.min.js"></script>
+
+    <!-- JS Front -->
+    <script src="~/front-dashboard-v1.1/dist/assets/js/theme.min.js"></script>
+    <script src="~/front-dashboard-v1.1/dist/assets/vendor/hs-toggle-password/dist/js/hs-toggle-password.js"></script>
+    <script src="~/front-dashboard-v1.1/src/assets/js/hs.validation.min.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+        $(document).on('ready', function () {
+            // INITIALIZATION OF SHOW PASSWORD
+            // =======================================================
+            $('.js-toggle-password').each(function () {
+                new HSTogglePassword(this).init();
+            });
+
+
+            // INITIALIZATION OF FORM VALIDATION
+            // =======================================================
+            $('.js-validate').each(function () {
+                $.HSCore.components.HSValidation.init($(this));
+            });
+
+
+            // INITIALIZATION OF SELECT2
+            // =======================================================
+            //$('.js-select2-custom').each(function () {
+            //    var select2 = $.HSCore.components.HSSelect2.init($(this));
+            //});
+        });
+    </script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await Component.InvokeAsync("Notyf")
+    @await RenderSectionAsync("scripts", false)
+
+
+    <!-- IE Support -->
+    <script>
+    @{ var url = $"{Context.Request.PathBase}/front-dashboard-v1.1/dist/assets/vendor/babel-polyfill/polyfill.min.js"; }
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@url"><\/script>');    </script>
+</body>
+</html>
+

@@ -1,0 +1,85 @@
+﻿@page
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+@model RegisterModel
+
+@{
+    ViewData["Title"] = "Log in";
+    Layout = "_LayoutUserPortal";
+}
+<div class="col-lg-6 d-flex justify-content-center align-items-center min-vh-lg-100">
+    <div class="w-100 pt-10 pt-lg-7 pb-7" style="max-width: 25rem;">
+        <!-- Form -->
+        <form class="js-validate" id="form" method="post">
+            <div class="text-center mb-5">
+                <h1 class="display-4">Register</h1>
+                @*<p>Don't have an account yet? <a asp-page="./ForgotPassword">Sign up here</a></p>*@
+            </div>
+
+            <!-- Form Group -->
+            <div class="js-form-message form-group registerClass">
+                <label class="input-label" for="txtFirstName">First Name</label>
+                <input type="text" class="form-control formClass" asp-for="Input.FirstName" required id="txtFirstName">
+
+            </div>
+            <div class="js-form-message form-group registerClass">
+                <label class="input-label" for="txtSurname">Surname</label>
+                <input type="text" class="form-control formClass" asp-for="Input.LastName" required id="txtSurname">
+
+            </div>
+
+            <div class="js-form-message form-group registerClass">
+                <label class="input-label" for="txtEmail">Your email</label>
+                <input type="email" class="form-control formClass" asp-for="Input.Email" required id="txtEmail">
+                <span style="color:#ed4c78;font-size: 80%;">@Model.EmailExist</span>
+            </div>
+
+            <div class="js-form-message form-group registerClass">
+                <label class="input-label" for="txtCellphone">Cellphone</label>
+                <input type="text" class="form-control formClass" asp-for="Input.PhoneNumber" required id="txtCellphone" maxlength="13">
+
+            </div>
+
+
+            <div class="js-form-message form-group registerClass">
+                <label class="input-label" for="txtPassword">Password</label>
+                <input type="password" class="form-control formClass" asp-for="Input.Password" required id="txtPassword">
+
+            </div>
+            <div class="d-flex justify-content-center" style="visibility:hidden" id="spinnerRegister">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden"></span>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-lg btn-block btn-primary" id="btnRegister">Register</button>
+            <a href="/Identity/Account/Login" class="btn btn-lg btn-block btn-primary" id="btnLogin">Login</a>
+        </form>
+    </div>
+</div>
+@section scripts{
+<script type="text/javascript">
+ $( "#txtSurname" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                        e.preventDefault();
+                    }
+                });
+
+
+     $( "#txtFirstName" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                        e.preventDefault();
+                    }
+                });
+
+
+    $('#txtCellphone').keyup(function(e){
+          if (/\D/g.test(this.value))
+          {
+            this.value = this.value.replace(/\D/g, '');
+          }
+    });
+</script>
+}

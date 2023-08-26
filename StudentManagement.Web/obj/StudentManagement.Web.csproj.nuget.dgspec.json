@@ -1,0 +1,248 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\zaino\\Documents\\Visual Studio 2019\\Projects\\StudentManagement.Web\\StudentManager.Web\\StudentManagement.Web\\StudentManagement.Web.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\zaino\\Documents\\Visual Studio 2019\\Projects\\StudentManagement.Web\\StudentManager.Web\\StudentManagement.Interface\\StudentManagement.Interface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zaino\\Documents\\Visual Studio 2019\\Projects\\StudentManagement.Web\\StudentManager.Web\\StudentManagement.Interface\\StudentManagement.Interface.csproj",
+        "projectName": "StudentManagement.Interface",
+        "projectPath": "C:\\Users\\zaino\\Documents\\Visual Studio 2019\\Projects\\StudentManagement.Web\\StudentManager.Web\\StudentManagement.Interface\\StudentManagement.Interface.csproj",
+        "packagesPath": "C:\\Users\\zaino\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zaino\\Documents\\Visual Studio 2019\\Projects\\StudentManagement.Web\\StudentManager.Web\\StudentManagement.Interface\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zaino\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\zaino\\Documents\\Visual Studio 2019\\Projects\\StudentManagement.Web\\StudentManager.Web\\StudentManagement.Model\\StudentManagement.Model.csproj": {
+                "projectPath": "C:\\Users\\zaino\\Documents\\Visual Studio 2019\\Projects\\StudentManagement.Web\\StudentManager.Web\\StudentManagement.Model\\StudentManagement.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\zaino\\Documents\\Visual Studio 2019\\Projects\\StudentManagement.Web\\StudentManager.Web\\StudentManagement.Model\\StudentManagement.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zaino\\Documents\\Visual Studio 2019\\Projects\\StudentManagement.Web\\StudentManager.Web\\StudentManagement.Model\\StudentManagement.Model.csproj",
+        "projectName": "StudentManagement.Model",
+        "projectPath": "C:\\Users\\zaino\\Documents\\Visual Studio 2019\\Projects\\StudentManagement.Web\\StudentManager.Web\\StudentManagement.Model\\StudentManagement.Model.csproj",
+        "packagesPath": "C:\\Users\\zaino\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zaino\\Documents\\Visual Studio 2019\\Projects\\StudentManagement.Web\\StudentManager.Web\\StudentManagement.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zaino\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Dapper.Contrib": {
+              "target": "Package",
+              "version": "[2.0.35, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\zaino\\Documents\\Visual Studio 2019\\Projects\\StudentManagement.Web\\StudentManager.Web\\StudentManagement.Web\\StudentManagement.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zaino\\Documents\\Visual Studio 2019\\Projects\\StudentManagement.Web\\StudentManager.Web\\StudentManagement.Web\\StudentManagement.Web.csproj",
+        "projectName": "StudentManagement.Web",
+        "projectPath": "C:\\Users\\zaino\\Documents\\Visual Studio 2019\\Projects\\StudentManagement.Web\\StudentManager.Web\\StudentManagement.Web\\StudentManagement.Web.csproj",
+        "packagesPath": "C:\\Users\\zaino\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zaino\\Documents\\Visual Studio 2019\\Projects\\StudentManagement.Web\\StudentManager.Web\\StudentManagement.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zaino\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\zaino\\Documents\\Visual Studio 2019\\Projects\\StudentManagement.Web\\StudentManager.Web\\StudentManagement.Interface\\StudentManagement.Interface.csproj": {
+                "projectPath": "C:\\Users\\zaino\\Documents\\Visual Studio 2019\\Projects\\StudentManagement.Web\\StudentManager.Web\\StudentManagement.Interface\\StudentManagement.Interface.csproj"
+              },
+              "C:\\Users\\zaino\\Documents\\Visual Studio 2019\\Projects\\StudentManagement.Web\\StudentManager.Web\\StudentManagement.Model\\StudentManagement.Model.csproj": {
+                "projectPath": "C:\\Users\\zaino\\Documents\\Visual Studio 2019\\Projects\\StudentManagement.Web\\StudentManager.Web\\StudentManagement.Model\\StudentManagement.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AspNetCoreHero.ToastNotification": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[3.1.32, )"
+            },
+            "Microsoft.AspNetCore.Session": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "NToastNotify": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

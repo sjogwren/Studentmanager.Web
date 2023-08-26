@@ -1,0 +1,173 @@
+﻿@model StudentManagement.Web.Models.StudentSubjectVM
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- ========== MAIN ========== -->
+<main id="content" role="main" class="main">
+    <div class="content container-fluid">
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="row align-items-end">
+                <div class="col-sm mb-2 mb-sm-0">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb breadcrumb-no-gutter">
+                            <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">New Student</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Students</li>
+                        </ol>
+                    </nav>
+
+                    <h1 class="page-header-title">Create</h1>
+                </div>
+            </div>
+        </div>
+        <!-- End Page Header -->
+    </div>
+    <!-- Content Section -->
+    <div class="content container-fluid my-n9">
+        <form class="js-validate" id="form1" method="post" asp-action="Newstudent" asp-controller="Student">
+            <div class="card">
+                <div class="card-header">
+                    <p class="card-header-title">New Student</p>
+                </div>
+                <div class="card-body">
+                    @if (Model.StudentExistMessage != null)
+                    {
+                        <div class="alert alert-soft-danger alert-dismissible fade show" role="alert">
+                            <strong>@Model.StudentExistMessage</strong>
+
+                        </div>
+                    }
+                    <!-- Input -->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <!-- Form Group -->
+                            <div class="form-group">
+                                <label for="vinNumberLabel" class="input-label">Student Name</label>
+                                <div class="js-form-message mb-3">
+                                    <input id="stName" type="text" class="form-control " required
+                                           data-msg="Please enter a student name." placeholder="Student Name" aria-label="Current Value" asp-for="Student.StudentFirstName">
+                                </div>
+                            </div>
+                            <!-- End Form Group -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <!-- Form Group -->
+                            <div class="form-group">
+                                <label for="vinNumberLabel" class="input-label">Student Surname</label>
+                                <div class="js-form-message mb-3">
+                                    <input id="stSurname" type="text" class="form-control " required
+                                           data-msg="Please enter a student surname." placeholder="Student Surname" aria-label="Current Value" asp-for="Student.StudentLastName">
+                                </div>
+                            </div>
+                            <!-- End Form Group -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <!-- Form Group -->
+                            <div class="form-group">
+                                <label for="vinNumberLabel" class="input-label">ID Number</label>
+                                <div class="js-form-message mb-3">
+                                    <input id="stID" type="text" class="form-control " required
+                                           data-msg="Please enter a ID Number." placeholder="Student ID Number" aria-label="Current Value" asp-for="Student.StudentIDNumber">
+                                </div>
+                            </div>
+                            <!-- End Form Group -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <!-- Form Group -->
+                            <div class="form-group">
+                                <label for="vinNumberLabel" class="input-label">Student Address</label>
+                                <div class="js-form-message mb-3">
+                                    <input id="stAddress" type="text" class="form-control " required
+                                           data-msg="Please enter a student address." placeholder="Student Address" aria-label="Current Value" asp-for="Student.StudentAddress">
+                                </div>
+                            </div>
+                            <!-- End Form Group -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <!-- Form Group -->
+                            <div class="form-group">
+                                <label for="vinNumberLabel" class="input-label">Student Mobile</label>
+                                <div class="js-form-message mb-3">
+                                    <input id="stMobile" type="text" class="form-control " required
+                                           data-msg="Please enter a student mobile." placeholder="Student Mobile" aria-label="Current Value" asp-for="Student.StudentMobile">
+                                </div>
+                            </div>
+                            <!-- End Form Group -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <!-- Form Group -->
+                            <div class="form-group">
+                                <label for="vinNumberLabel" class="input-label">Student Email</label>
+                                <div class="js-form-message mb-3">
+                                    <input id="stEmail" type="email" class="form-control " required
+                                           data-msg="Please enter a student email." placeholder="Email Address" aria-label="Current Value" asp-for="Student.StudentEmailAddress">
+                                </div>
+                            </div>
+                            <!-- End Form Group -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <!-- Form Group -->
+                            <div class="form-group">
+                                <label for="vinNumberLabel" class="input-label">Subject Name</label>
+                                <div class="js-form-message mb-3">
+                                    <input id="stSubjectName" type="text" class="form-control " required
+                                           data-msg="Please enter a subject name." placeholder="Subject name" aria-label="Current Value" asp-for="Subject.SubjectName">
+                                </div>
+                            </div>
+                            <!-- End Form Group -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <!-- Form Group -->
+                            <div class="form-group">
+                                <label for="vinNumberLabel" class="input-label">Subject Description</label>
+                                <div class="js-form-message mb-3">
+                                    <input id="stSubjectDesc" type="text" class="form-control " required
+                                           data-msg="Please enter a subject." placeholder="Subject" aria-label="Current Value" asp-for="Subject.SubjectDescription">
+                                </div>
+                            </div>
+                            <!-- End Form Group -->
+                        </div>
+                    </div>
+                    <!-- End Input -->
+                    <div class="w-100"></div>
+                    <!-- End Form -->
+                </div>
+                <!-- Footer -->
+                <div class="card-footer d-flex justify-content-end">
+                    <a class="btn btn-white" href="@Url.Action("Currentstudents", "Student")">Cancel</a>
+                    <input type="submit" value="Save" class="btn btn-primary ml-2" id="btnSave" />
+                </div>
+                <!-- End Footer -->
+            </div>
+        </form>
+    </div>
+    <!-- End Content Section -->
+</main>
+<!-- ========== END MAIN ========== -->
+@section scripts {
+    <!-- JS Plugins Init. -->
+    <script>
+        $('input[id="stID"]').keyup(function (e) {
+            if (/\D/g.test(this.value)) {
+                // Filter non-digits from input value.
+                this.value = this.value.replace(/\D/g, '');
+            }
+        });
+    </script>
+}
